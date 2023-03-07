@@ -4,7 +4,7 @@ This repository contains several useful ADS-B Grafana dashboards.
 
 ## Content
 
--   [aggregator_dashboard](grafana/dashboards/aggregator_dashboard.json): A dashboard that shows exciting statistics about several ADS-B aggregators.
+-   [aggregators_dashboard](grafana/dashboards/aggregators_dashboard.json): A dashboard that shows exciting statistics about several ADS-B aggregators.
 
 ## Instructions
 

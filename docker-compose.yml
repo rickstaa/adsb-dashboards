@@ -1,0 +1,58 @@
+version: "3.8"
+
+services:
+  nginx-proxy:
+    image: 'jc21/nginx-proxy-manager:latest'
+    ports:  # For security change left side to random port.
+      - '80:80'
+      - '81:81'
+      - '443:443' 
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+    restart: unless-stopped
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 9443:9443
+      - 8000:8000
+    restart: unless-stopped
+  prometheus:
+    image: quay.io/prometheus/prometheus
+    container_name: prometheus
+    volumes:
+      - prometheus_data:/prometheus
+      - $PWD/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - 9090:9090
+    restart: unless-stopped
+  json_exporter:
+    image: quay.io/prometheuscommunity/json-exporter:v0.5.0
+    container_name: json_exporter
+    volumes:
+      - $PWD/prometheus/exporters/json_exporter/config.yml:/config.yml:ro
+    ports:
+      - 7979:7979
+    restart: unless-stopped
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    volumes:
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - grafana_data:/var/lib/grafana
+    ports:
+      - 3000:3000
+    environment:
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: "/var/lib/grafana/dashboards/aggregators_dashboard.json"
+    restart: unless-stopped
+
+volumes:
+  portainer_data:
+  prometheus_data:
+  grafana_data:

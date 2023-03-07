@@ -1,0 +1,29 @@
+modules:
+  adsb-fi:
+    metrics:
+      - name: mlatFeeders
+        path: "{ .mlatFeeders }"
+        labels:
+          aggregator: adsb-fi
+      - name: beastFeeders
+        path: "{ .beastFeeders }"
+        labels:
+          aggregator: adsb-fi
+      - name: aircraft
+        path: "{ .totalAircraft }"
+        labels:
+          aggregator: adsb-fi
+  adsb-lol:
+    metrics:
+      - name: mlatFeeders
+        path: "{ .global.mlat }"
+        labels:
+          aggregator: adsb-lol
+      - name: beastFeeders
+        path: "{ .global.beast }"
+        labels:
+          aggregator: adsb-lol
+      - name: aircraft
+        path: "{ .global.planes }"
+        labels:
+          aggregator: adsb-lol

@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+- name: Prometheus
+  orgId: 1
+  folder: ADS-B
+  type: file
+  disableDeletion: false
+  editable: true
+  options:
+    path: /var/lib/grafana/dashboards
