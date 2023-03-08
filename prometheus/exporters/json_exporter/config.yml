@@ -11,11 +11,6 @@ modules:
         path: "{ .beastFeeders }"
         labels:
           aggregator: adsb-fi
-      - name: aircraft
-        help: ADS-B.fi tracked aircraft count.
-        path: "{ .totalAircraft }"
-        labels:
-          aggregator: adsb-fi
   adsb-fi-aircraft:
     metrics:
       - name: aircraft
@@ -33,11 +28,6 @@ modules:
       - name: beast_feeders
         help: ADS-B.lol BEAST Feeder count.
         path: "{ .global.beast }"
-        labels:
-          aggregator: adsb-lol
-      - name: aircraft
-        help: ADS-B.lol tracked aircraft count.
-        path: "{ .global.planes }"
         labels:
           aggregator: adsb-lol
   adsb-lol-aircraft:
@@ -64,12 +54,12 @@ modules:
   TAT:
     metrics: 
       - name: mlat_feeders
-        help: ADS-B.one BEAST Feeder count.
+        help: TheAirTraffic.com BEAST Feeder count.
         path: "{ .mlat_clients }"
         labels:
           aggregator: TAT
       - name: beast_feeders
-        help: ADS-B.one BEAST Feeder count.
+        help: TheAirTraffic.com BEAST Feeder count.
         path: "{ .readsb_clients }"
         labels:
           aggregator: TAT
