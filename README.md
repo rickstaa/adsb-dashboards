@@ -21,7 +21,8 @@ The `docker-compose` file spins up four containers:
 
 -   **Portainer**: A container that runs [Portainer](https://www.portainer.io/install) which can be used to manage the other containers (port `9443`).
 -   **Prometheus**: A container that runs [Prometheus](https://prometheus.io/) (port `9090`).
--   **json_exporter**: A Container runs a Prometheus [Json Exporter](https://github.com/prometheus-community/json_exporter) (port `7979`).
+-   **json_exporter**: A container that runs a Prometheus [Json Exporter](https://github.com/prometheus-community/json_exporter) (port `7979`).
+-   **adsbx_exporter**: A container that runs a [custom ADSBx exporter](prometheus/exporters/adsbx_exporter/main.go) (port `19100`).
 -   **Grafana**: A container runs [Grafana](https://grafana.com/) (port `3000`).
 
 ## Contributing
