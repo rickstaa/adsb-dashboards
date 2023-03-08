@@ -47,6 +47,10 @@ services:
       - 3000:3000
     environment:
       GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: "/var/lib/grafana/dashboards/aggregators_dashboard.json"
+      # GF_SECURITY_ALLOW_EMBEDDING: true # Uncomment this line to allow embedding of Grafana dashboards.
+      # GF_AUTH_ANONYMOUS_ENABLED: true # Uncomment this line to allow anonymous access to Grafana.
+      # GF_AUTH_ANONYMOUS_HIDE_VERSION: true # Uncomment this line to hide the version number from the Grafana UI.
+      # GF_AUTH_ANONYMOUS_ORG_NAME: "ADSB.cool" # Uncomment this line to set the name of the organization.
     restart: unless-stopped
 
 volumes:
