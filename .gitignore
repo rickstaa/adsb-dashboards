@@ -1,3 +1,6 @@
+# Exporter Binaries
+adsbx-exporter
+
 # IDE
 .vscode
 *.code-workspace

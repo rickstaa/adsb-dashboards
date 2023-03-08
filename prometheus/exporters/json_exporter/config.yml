@@ -1,29 +1,75 @@
 modules:
   adsb-fi:
     metrics:
-      - name: mlatFeeders
+      - name: mlat_feeders
+        help: ADS-B.fi MLAT Feeder count.
         path: "{ .mlatFeeders }"
         labels:
           aggregator: adsb-fi
-      - name: beastFeeders
+      - name: beast_feeders
+        help: ADS-B.fi BEAST Feeder count.
         path: "{ .beastFeeders }"
         labels:
           aggregator: adsb-fi
       - name: aircraft
+        help: ADS-B.fi tracked aircraft count.
+        path: "{ .totalAircraft }"
+        labels:
+          aggregator: adsb-fi
+  adsb-fi-aircraft:
+    metrics:
+      - name: aircraft
+        help: ADS-B.fi tracked aircraft count.
         path: "{ .totalAircraft }"
         labels:
           aggregator: adsb-fi
   adsb-lol:
     metrics:
-      - name: mlatFeeders
+      - name: mlat_feeders
+        help: ADS-B.lol MLAT Feeder count.
         path: "{ .global.mlat }"
         labels:
           aggregator: adsb-lol
-      - name: beastFeeders
+      - name: beast_feeders
+        help: ADS-B.lol BEAST Feeder count.
         path: "{ .global.beast }"
         labels:
           aggregator: adsb-lol
       - name: aircraft
+        help: ADS-B.lol tracked aircraft count.
         path: "{ .global.planes }"
         labels:
           aggregator: adsb-lol
+  adsb-lol-aircraft:
+    metrics:
+      - name: aircraft
+        help: ADS-B.lol tracked aircraft count.
+        path: "{ .global.planes }"
+        labels:
+          aggregator: adsb-lol
+  adsb-one-mlat:
+    metrics: 
+      - name: mlat_feeders
+        help: ADS-B.one MLAT Feeder count.
+        path: "{ .client_count }"
+        labels:
+          aggregator: adsb-one
+  adsb-one-beast:
+    metrics: 
+      - name: beast_feeders
+        help: ADS-B.one BEAST Feeder count.
+        path: "{ .clients }"
+        labels:
+          aggregator: adsb-one
+  TAT:
+    metrics: 
+      - name: mlat_feeders
+        help: ADS-B.one BEAST Feeder count.
+        path: "{ .mlat_clients }"
+        labels:
+          aggregator: TAT
+      - name: beast_feeders
+        help: ADS-B.one BEAST Feeder count.
+        path: "{ .readsb_clients }"
+        labels:
+          aggregator: TAT

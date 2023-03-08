@@ -1,16 +1,6 @@
 version: "3.8"
 
 services:
-  nginx-proxy:
-    image: 'jc21/nginx-proxy-manager:latest'
-    ports:  # For security change left side to random port.
-      - '80:80'
-      - '81:81'
-      - '443:443' 
-    volumes:
-      - ./data:/data
-      - ./letsencrypt:/etc/letsencrypt
-    restart: unless-stopped
   portainer:
     image: portainer/portainer-ce:latest
     container_name: portainer
@@ -38,6 +28,13 @@ services:
     ports:
       - 7979:7979
     restart: unless-stopped
+  adsbx_exporter:
+    build:
+      context: ./prometheus/exporters/adsbx_exporter
+      dockerfile: Dockerfile
+    container_name: adsbx_exporter
+    ports:
+      - 19100:19100
   grafana:
     image: grafana/grafana:latest
     container_name: grafana

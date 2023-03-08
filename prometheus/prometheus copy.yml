@@ -4,7 +4,7 @@ global:
 
 scrape_configs:
   - job_name: adsb_fi_exporter
-    scrape_interval: 1m
+    scrape_interval: 5m
     scrape_timeout: 30s
     metrics_path: /probe
     params:
@@ -21,8 +21,26 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: json_exporter:7979
-  - job_name: adsb_lol_exporter
+  - job_name: adsb_fi_aircraft_exporter
     scrape_interval: 1m
+    scrape_timeout: 30s
+    metrics_path: /probe
+    params:
+      module: ["adsb-fi-aircraft"]
+    static_configs:
+      - targets:
+          - https://api.adsb.fi/v1/stats
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [module]
+        target_label: __param_module
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: json_exporter:7979
+  - job_name: adsb_lol_exporter
+    scrape_interval: 5m
     scrape_timeout: 30s
     metrics_path: /probe
     params:
@@ -39,8 +57,26 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: json_exporter:7979
-  - job_name: adsb_one_mlat_exporter
+  - job_name: adsb_lol_aircraft_exporter
     scrape_interval: 1m
+    scrape_timeout: 30s
+    metrics_path: /probe
+    params:
+      module: ["adsb-lol-aircraft"]
+    static_configs:
+      - targets:
+          - https://adsb.lol/api/0/me
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [module]
+        target_label: __param_module
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: json_exporter:7979
+  - job_name: adsb_one_mlat_exporter
+    scrape_interval: 5m
     scrape_timeout: 30s
     metrics_path: /probe
     params:
@@ -58,7 +94,7 @@ scrape_configs:
       - target_label: __address__
         replacement: json_exporter:7979
   - job_name: adsb_one_beast_exporter
-    scrape_interval: 1m
+    scrape_interval: 5m
     scrape_timeout: 30s
     metrics_path: /probe
     params:
@@ -76,7 +112,7 @@ scrape_configs:
       - target_label: __address__
         replacement: json_exporter:7979
   - job_name: TAT_exporter
-    scrape_interval: 1m
+    scrape_interval: 5m
     scrape_timeout: 30s
     metrics_path: /probe
     params:
@@ -94,7 +130,7 @@ scrape_configs:
       - target_label: __address__
         replacement: json_exporter:7979
   - job_name: adsbx_exporter
-    scrape_interval: 1m
+    scrape_interval: 5m
     scrape_timeout: 30s
     static_configs:
       - targets:
