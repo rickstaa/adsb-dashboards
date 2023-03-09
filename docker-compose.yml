@@ -55,7 +55,7 @@ services:
       # GF_SECURITY_ALLOW_EMBEDDING: true # Uncomment this line to allow embedding of Grafana dashboards.
       # GF_AUTH_ANONYMOUS_ENABLED: true # Uncomment this line to allow anonymous access to Grafana.
       # GF_AUTH_ANONYMOUS_HIDE_VERSION: true # Uncomment this line to hide the version number from the Grafana UI.
-      # GF_AUTH_ANONYMOUS_ORG_NAME: "ADSB.cool" # Uncomment this line to set the name of the organization.
+      # GF_AUTH_ANONYMOUS_ORG_NAME: "Main Org." # Uncomment this to set anonymous login organization.
     restart: unless-stopped
 
 volumes:
