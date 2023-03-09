@@ -60,7 +60,7 @@
               "type": "linear"
             },
             "showPoints": "auto",
-            "spanNulls": false,
+            "spanNulls": true,
             "stacking": {
               "group": "A",
               "mode": "none"
@@ -150,7 +150,7 @@
               "type": "linear"
             },
             "showPoints": "auto",
-            "spanNulls": false,
+            "spanNulls": true,
             "stacking": {
               "group": "A",
               "mode": "none"
@@ -347,6 +347,6 @@
   "timezone": "",
   "title": "Aggregator dashboard",
   "uid": "sXnO8RaVz",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
