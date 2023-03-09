@@ -62,3 +62,7 @@ volumes:
   portainer_data:
   prometheus_data:
   grafana_data:
+
+networks:
+  default:
+    name: adsb-dashboards
