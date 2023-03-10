@@ -54,7 +54,7 @@ modules:
   TAT:
     metrics: 
       - name: mlat_feeders
-        help: TheAirTraffic.com BEAST Feeder count.
+        help: TheAirTraffic.com MLAT Feeder count.
         path: "{ .mlat_clients }"
         labels:
           aggregator: TAT
@@ -63,3 +63,17 @@ modules:
         path: "{ .readsb_clients }"
         labels:
           aggregator: TAT
+  airframes:
+    metrics: 
+      - name: other_feeders
+        help: Airframes.io MLAT Feeder count.
+        path: "{ .stations.active }"
+        labels:
+          aggregator: airframes
+  airframes-aircraft:
+    metrics: 
+      - name: aircraft
+        help: Airframes.io tracked aircraft count.
+        path: "{ .flights.active }"
+        labels:
+          aggregator: airframes
