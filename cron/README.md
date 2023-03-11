@@ -2,7 +2,7 @@
 
 This folder contains some cronjobs I use with the dashboards.
 
--   **prom_backup.sh**: A cronjob I use to backup snapshots of the Prometheus database to an external USB (see <https://prometheus.io/docs/prometheus/latest/querying/api/#snapshot>). This can be replaced using any external storage provider (see <https://prometheus.io/docs/operating/integrations/>).
+-   **prom_snapshot.sh**: A cronjob I use to automatically create prometheus snapshots (see <https://prometheus.io/docs/prometheus/latest/querying/api/#snapshot>). This can be replaced using any external storage provider (see <https://prometheus.io/docs/operating/integrations/>).
 
 ## How to use
 
