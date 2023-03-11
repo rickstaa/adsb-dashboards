@@ -123,7 +123,7 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "Aggregator MLAT Feeder count.",
+      "description": "Aggregator BEAST Feeder count.",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -198,14 +198,14 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "mlat_feeders",
+          "expr": "beast_feeders",
           "interval": "",
           "legendFormat": "{{aggregator}}",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "MLAT Feeders",
+      "title": "BEAST Feeders",
       "type": "timeseries"
     },
     {
