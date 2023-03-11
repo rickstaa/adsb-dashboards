@@ -41,6 +41,7 @@ services:
     container_name: adsbx_exporter
     ports:
       - 19100:19100
+    restart: unless-stopped
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
