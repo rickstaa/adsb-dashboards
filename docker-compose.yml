@@ -24,6 +24,7 @@ services:
       - "--storage.tsdb.path=/prometheus"
       - "--storage.tsdb.retention.size=10GB" # Comment this line to revert back to the default retention size.
       - "--storage.tsdb.retention.time=1y" # Comment this line to revert back to the default retention time.
+      # - "--web.enable-admin-api" # Uncomment this line if you want to take snapshots through the API.
     restart: unless-stopped
   json_exporter:
     image: quay.io/prometheuscommunity/json-exporter:v0.5.0
