@@ -47,7 +47,7 @@ scrape_configs:
       module: ["adsb-lol"]
     static_configs:
       - targets:
-          - https://adsb.lol/api/0/me
+          - https://api.adsb.lol/api/0/me
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -65,7 +65,7 @@ scrape_configs:
       module: ["adsb-lol-aircraft"]
     static_configs:
       - targets:
-          - https://adsb.lol/api/0/me
+          - https://api.adsb.lol/api/0/me
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
