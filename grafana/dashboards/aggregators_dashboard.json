@@ -33,6 +33,37 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
+      "gridPos": {
+        "h": 1.25,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 9,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Code",
+          "url": "https://github.com/rickstaa/adsb-dashboards"
+        }
+      ],
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div align=\"center\">\n  <a href=\"https://github.com/rickstaa/adsb-dashboards\"><img alt=\"GitHub Repo stars\" src=\"https://img.shields.io/github/stars/rickstaa/adsb-dashboards?style=social\"></a>\n  <a href=\"https://github.com/rickstaa/adsb-dashboards/fork\"><img alt=\"GitHub forks\" src=\"https://img.shields.io/github/forks/rickstaa/adsb-dashboards?style=social\"></a>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "9.4.3",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "description": "Aggregator MLAT Feeder count.",
       "fieldConfig": {
         "defaults": {
@@ -86,7 +117,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 0
+        "y": 1.25
       },
       "id": 2,
       "options": {
@@ -237,7 +268,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 0
+        "y": 1.25
       },
       "id": 7,
       "options": {
@@ -403,7 +434,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 9
+        "y": 10.25
       },
       "id": 4,
       "options": {
@@ -538,7 +569,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 9
+        "y": 10.25
       },
       "id": 6,
       "options": {
@@ -574,10 +605,7 @@
   "revision": 1,
   "schemaVersion": 38,
   "style": "dark",
-  "tags": [
-    "ads-b",
-    "aggregtors"
-  ],
+  "tags": ["ads-b", "aggregtors"],
   "templating": {
     "list": []
   },
