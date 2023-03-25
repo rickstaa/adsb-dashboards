@@ -44,7 +44,7 @@
       "links": [
         {
           "targetBlank": true,
-          "title": "Code",
+          "title": "GitHub Repository",
           "url": "https://github.com/rickstaa/adsb-dashboards"
         }
       ],
@@ -54,7 +54,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div align=\"center\">\n  <a href=\"https://github.com/rickstaa/adsb-dashboards\"><img alt=\"GitHub Repo stars\" src=\"https://img.shields.io/github/stars/rickstaa/adsb-dashboards?style=social\"></a>\n  <a href=\"https://github.com/rickstaa/adsb-dashboards/fork\"><img alt=\"GitHub forks\" src=\"https://img.shields.io/github/forks/rickstaa/adsb-dashboards?style=social\"></a>\n</div>",
+        "content": "<div align=\"center\">\n  <a href=\"https://github.com/rickstaa/adsb-dashboards\" target=\"_blank\"><img alt=\"GitHub Repo stars\" src=\"https://img.shields.io/github/stars/rickstaa/adsb-dashboards?style=social\"></a>\n  <a href=\"https://github.com/rickstaa/adsb-dashboards/fork\" target=\"_blank\"><img alt=\"GitHub forks\" src=\"https://img.shields.io/github/forks/rickstaa/adsb-dashboards?style=social\"></a>\n</div>",
         "mode": "html"
       },
       "pluginVersion": "9.4.3",
@@ -607,10 +607,7 @@
   "revision": 1,
   "schemaVersion": 38,
   "style": "dark",
-  "tags": [
-    "ads-b",
-    "aggregtors"
-  ],
+  "tags": ["ads-b", "aggregtors"],
   "templating": {
     "list": []
   },
