@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 9443:9443
+      - 8000:8000
+    restart: unless-stopped
+
+volumes:
+  portainer_data:
+
+networks:
+  default:
+    name: portainer
