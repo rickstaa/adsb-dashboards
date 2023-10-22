@@ -111,15 +111,15 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: json_exporter:7979
-  - job_name: adsb_one_mlat_exporter
+  - job_name: adsb_one_exporter
     scrape_interval: 15m
     scrape_timeout: 30s
     metrics_path: /probe
     params:
-      module: ["adsb-one-mlat"]
+      module: ["adsb-one"]
     static_configs:
       - targets:
-          - https://api.adsb.one/clients/mlat
+          - https://api.adsb.one/stats
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -129,15 +129,15 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: json_exporter:7979
-  - job_name: adsb_one_beast_exporter
-    scrape_interval: 15m
+  - job_name: adsb_one_aircraft_exporter
+    scrape_interval: 5m
     scrape_timeout: 30s
     metrics_path: /probe
     params:
-      module: ["adsb-one-beast"]
+      module: ["adsb-one-aircraft"]
     static_configs:
       - targets:
-          - https://api.adsb.one/clients/beast
+          - https://api.adsb.one/stats
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -155,7 +155,7 @@ scrape_configs:
       module: ["TAT"]
     static_configs:
       - targets:
-          - https://theairtraffic.com/api/stats.json/
+          - https://theairtraffic.com/iapi/stats.json/
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -201,19 +201,19 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: json_exporter:7979
-  - job_name: adsbx_exporter
-    scrape_interval: 15m
-    scrape_timeout: 30s
-    static_configs:
-      - targets:
-          - http://adsbx_exporter:19100
-    relabel_configs:
-      - source_labels: [__address__]
-        target_label: __param_target
-      - source_labels: [__param_target]
-        target_label: instance
-      - target_label: __address__
-        replacement: adsbx_exporter:19100
+  # - job_name: adsbx_exporter # NOTE: Disabled because adsbx protected their endpoint.
+  #   scrape_interval: 30s
+  #   scrape_timeout: 30s
+  #   static_configs:
+  #     - targets:
+  #         - http://adsbx_exporter:19100
+  #   relabel_configs:
+  #     - source_labels: [__address__]
+  #       target_label: __param_target
+  #     - source_labels: [__param_target]
+  #       target_label: instance
+  #     - target_label: __address__
+  #       replacement: adsbx_exporter:19100
 
 # Uncomment if you want to send data to grafana cloud
 # remote_write:

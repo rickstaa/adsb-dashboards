@@ -4,26 +4,27 @@ This repository contains several useful ADS-B Grafana dashboards.
 
 ## Content
 
--   [aggregators_dashboard](grafana/dashboards/aggregators_dashboard.json): A dashboard that shows exciting statistics about several ADS-B aggregators.
+- [aggregators_dashboard](grafana/dashboards/aggregators_dashboard.json): A dashboard that shows general statistics about several ADS-B aggregators.
 
 ## Instructions
 
-This repository contains a [docker-compose](docker-compose.yml) file that can run the dashboards locally. You can use the following steps to do this:
+This repository contains [docker-compose](docker-compose.yml) files that can be used to run the dashboards. You can use the following steps to do this:
 
 1.  Clone the repository.
 2.  Install [Docker](https://www.docker.com/).
-3.  Run `docker compose up -d` inside the repository folder;.
+3.  Run `docker compose up -d` inside the repository folder.
 4.  Checkout the dashboards at `localhost:3000`.
 
 ## Docker-compose components
 
-The `docker-compose` file orchestrates three containers, each serving a distinct purpose:
+The `docker-compose` file orchestrates ~~three~~two containers, each serving a distinct purpose:
 
--   **json_exporter**: Here resides a container running a Prometheus [Json Exporter](https://github.com/prometheus-community/json_exporter) accessible on port `7979`.
--   **adsbx_exporter**: This container is dedicated to executing a [custom ADSBx exporter](prometheus/exporters/adsbx_exporter/main.go) and exposes its metrics on port `19100`.
--   **Grafana**: Hosting [Grafana](https://grafana.com/), this container makes its services available on port `3000`.
+**prometheus**: A [Prometheus](https://prometheus.io/) container for storing tracked data. Accessible on port `9090`. - **json_exporter**: A Prometheus [Json Exporter](https://github.com/prometheus-community/json_exporter) used for collecting API data. Accessible on port `7979`.
 
-Moreover, within this repository, a [Portainer container](portainer/README.md) awaits, ready to facilitate the management of the other containers.
+- ~~**adsbx_exporter**: A [custom ADSBx exporter](prometheus/exporters/adsbx_exporter/main.go) container dedicated to collecting adsbx API data. Accessible on port `19100`.~~ - No longer works due to recent [adsb-x](https://adsbexchange.com/) api changes.
+- **Grafana**: A [Grafana](https://grafana.com/) container used for displaying tracked data. Accessible on port `3000`.
+
+Additionally, this repository contains a [Portainer container](portainer/README.md) that can be used to facilitate the management of the other containers.
 
 ## Contributing
 

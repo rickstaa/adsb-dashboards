@@ -24,14 +24,14 @@ services:
     ports:
       - 7979:7979
     restart: unless-stopped
-  adsbx_exporter:
-    build:
-      context: ./prometheus/exporters/adsbx_exporter
-      dockerfile: Dockerfile
-    container_name: adsbx_exporter
-    ports:
-      - 19100:19100
-    restart: unless-stopped
+  # adsbx_exporter: # NOTE: Disabled because adsbx protected their endpoint.
+  #   build:
+  #     context: ./prometheus/exporters/adsbx_exporter
+  #     dockerfile: Dockerfile
+  #   container_name: adsbx_exporter
+  #   ports:
+  #     - 19100:19100
+  #   restart: unless-stopped
   grafana:
     image: grafana/grafana:latest
     container_name: grafana

@@ -56,22 +56,27 @@ modules:
         path: "{ .global.planes }"
         labels:
           aggregator: adsb-lol
-  adsb-one-mlat:
-    metrics: 
+  adsb-one:
+    metrics:
       - name: mlat_feeders
         help: ADS-B.one MLAT Feeder count.
-        path: "{ .client_count }"
+        path: "{ .mlat }"
         labels:
           aggregator: adsb-one
-  adsb-one-beast:
-    metrics: 
       - name: beast_feeders
         help: ADS-B.one BEAST Feeder count.
-        path: "{ .clients }"
+        path: "{ .beast }"
+        labels:
+          aggregator: adsb-one
+  adsb-one-aircraft:
+    metrics:
+      - name: aircraft
+        help: ADS-B.one tracked aircraft count.
+        path: "{ .aircraft }"
         labels:
           aggregator: adsb-one
   TAT:
-    metrics: 
+    metrics:
       - name: mlat_feeders
         help: TheAirTraffic.com MLAT Feeder count.
         path: "{ .mlat_clients }"
@@ -83,14 +88,14 @@ modules:
         labels:
           aggregator: TAT
   airframes:
-    metrics: 
+    metrics:
       - name: other_feeders
         help: Airframes.io MLAT Feeder count.
         path: "{ .stats.stations.active.total }"
         labels:
           aggregator: airframes
   airframes-aircraft:
-    metrics: 
+    metrics:
       - name: aircraft
         help: Airframes.io tracked aircraft count.
         path: "{ .stats.airframes.flights.active }"
