@@ -18,6 +18,25 @@ modules:
         path: "{ .totalAircraft }"
         labels:
           aggregator: adsb-fi
+  airplanes-live:
+    metrics:
+      - name: beast_feeders
+        help: airplanes.live beast feeder count
+        path: "{ .beast }"
+        labels:
+          aggregator: airplanes.live
+      - name: mlat_feeders
+        help: airplanes.live mlat feeder count
+        path: "{ .mlat }"
+        labels:
+          aggregator: airplanes.live
+  airplanes-live-aircraft:
+    metrics:
+      - name: aircraft
+        help: airplanes.live tracked aircraft count
+        path: "{ .aircraft }"
+        labels:
+          aggregator: airplanes.live
   adsb-lol:
     metrics:
       - name: mlat_feeders

@@ -17,13 +17,13 @@ This repository contains a [docker-compose](docker-compose.yml) file that can ru
 
 ## Docker-compose components
 
-The `docker-compose` file spins up four containers:
+The `docker-compose` file orchestrates three containers, each serving a distinct purpose:
 
--   **Portainer**: A container that runs [Portainer](https://www.portainer.io/install) which can be used to manage the other containers (port `9443`).
--   **Prometheus**: A container that runs [Prometheus](https://prometheus.io/) (port `9090`).
--   **json_exporter**: A container that runs a Prometheus [Json Exporter](https://github.com/prometheus-community/json_exporter) (port `7979`).
--   **adsbx_exporter**: A container that runs a [custom ADSBx exporter](prometheus/exporters/adsbx_exporter/main.go) (port `19100`).
--   **Grafana**: A container runs [Grafana](https://grafana.com/) (port `3000`).
+-   **json_exporter**: Here resides a container running a Prometheus [Json Exporter](https://github.com/prometheus-community/json_exporter) accessible on port `7979`.
+-   **adsbx_exporter**: This container is dedicated to executing a [custom ADSBx exporter](prometheus/exporters/adsbx_exporter/main.go) and exposes its metrics on port `19100`.
+-   **Grafana**: Hosting [Grafana](https://grafana.com/), this container makes its services available on port `3000`.
+
+Moreover, within this repository, a [Portainer container](portainer/README.md) awaits, ready to facilitate the management of the other containers.
 
 ## Contributing
 
