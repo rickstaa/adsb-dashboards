@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  cloudflare-tunnel:
+    container_name: cloudflare-tunnel
+    image: "cloudflare/cloudflared:latest"
+    command: "tunnel --no-autoupdate run --token $CLOUDFLARE_TOKEN"
+    restart: unless-stopped
+    networks:
+      - adsb-dashboards # The container network to wich the tunnel will be attached.
+
+networks:
+  adsb-dashboards:
+    external: true

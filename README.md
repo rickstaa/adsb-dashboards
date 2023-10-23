@@ -24,7 +24,7 @@ The `docker-compose` file orchestrates ~~four~~three containers, each serving a 
 - ~~**adsbx_exporter**: A [custom ADSBx exporter](prometheus/exporters/adsbx_exporter/main.go) container dedicated to collecting adsbx API data. Accessible on port `19100`.~~ - No longer works due to recent [adsb-x](https://adsbexchange.com/) api changes.
 - **Grafana**: A [Grafana](https://grafana.com/) container used for displaying tracked data. Accessible on port `3000`.
 
-Additionally, this repository contains a [Portainer container](portainer/README.md) that can be used to facilitate the management of the other containers.
+Furthermore, within this repository, you'll discover a [Portainer container](portainer/README.md) designed to simplify the management of other containers. Additionally, there's a dedicated [Duplicati container](duplicati/README.md) for efficiently backing up the Prometheus database. Lastly, a [Cloudflare Dockerfile](cloudflare_tunnel/README.md) facilitates the initiation of a Cloudflare tunnel, ensuring a secure way to share the ADS-B dashboard with the external world.
 
 ## Contributing
 

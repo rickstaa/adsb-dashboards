@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  duplicati:
+    image: lscr.io/linuxserver/duplicati:latest
+    container_name: duplicati
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Brussels
+      - CLI_ARGS= #optional
+    volumes:
+      - /opt/duplicati/config:/config
+      - duplicati_data:/backups
+      - prometheus_data:/source/prometheus
+    ports:
+      - 8200:8200
+    restart: unless-stopped
+
+volumes:
+  duplicati_data:
+
+networks:
+  default:
+    name: duplicati
