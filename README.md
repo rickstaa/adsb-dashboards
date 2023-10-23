@@ -17,7 +17,7 @@ This repository contains [docker-compose](docker-compose.yml) files that can be 
 
 ## Docker-compose components
 
-The `docker-compose` file orchestrates ~~three~~two containers, each serving a distinct purpose:
+The `docker-compose` file orchestrates ~~four~~three containers, each serving a distinct purpose:
 
 - **prometheus**: A [Prometheus](https://prometheus.io/) container for storing tracked data. Accessible on port `9090`.
 - **json_exporter**: A Prometheus [Json Exporter](https://github.com/prometheus-community/json_exporter) used for collecting API data. Accessible on port `7979`.
