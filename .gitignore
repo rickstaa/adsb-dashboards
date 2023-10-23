@@ -4,3 +4,6 @@ adsbx-exporter
 # IDE
 .vscode
 *.code-workspace
+
+# Secrets
+.env
