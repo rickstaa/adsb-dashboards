@@ -19,8 +19,8 @@ This repository contains [docker-compose](docker-compose.yml) files that can be 
 
 The `docker-compose` file orchestrates ~~three~~two containers, each serving a distinct purpose:
 
-**prometheus**: A [Prometheus](https://prometheus.io/) container for storing tracked data. Accessible on port `9090`. - **json_exporter**: A Prometheus [Json Exporter](https://github.com/prometheus-community/json_exporter) used for collecting API data. Accessible on port `7979`.
-
+- **prometheus**: A [Prometheus](https://prometheus.io/) container for storing tracked data. Accessible on port `9090`.
+- **json_exporter**: A Prometheus [Json Exporter](https://github.com/prometheus-community/json_exporter) used for collecting API data. Accessible on port `7979`.
 - ~~**adsbx_exporter**: A [custom ADSBx exporter](prometheus/exporters/adsbx_exporter/main.go) container dedicated to collecting adsbx API data. Accessible on port `19100`.~~ - No longer works due to recent [adsb-x](https://adsbexchange.com/) api changes.
 - **Grafana**: A [Grafana](https://grafana.com/) container used for displaying tracked data. Accessible on port `3000`.
 
