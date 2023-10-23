@@ -56,7 +56,6 @@ volumes:
   prometheus_data:
   grafana_data:
 
-
 networks:
   default:
     name: adsb-dashboards
