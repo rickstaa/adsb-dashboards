@@ -8,7 +8,6 @@ services:
     restart: unless-stopped
     networks:
       - adsb-dashboards # The container network to wich the tunnel will be attached.
-    restart: unless-stopped
 
 networks:
   adsb-dashboards:
