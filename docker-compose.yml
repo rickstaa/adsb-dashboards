@@ -46,10 +46,10 @@ services:
       GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: "/var/lib/grafana/dashboards/aggregators_dashboard.json"
       GF_PANELS_DISABLE_SANITIZE_HTML: true # Uncomment this line to allow HTML in Grafana dashboards.
       # GF_SECURITY_ALLOW_EMBEDDING: true # Uncomment this line to allow embedding of Grafana dashboards.
-      GF_AUTH_ANONYMOUS_ENABLED: true # Uncomment this line to allow anonymous access to Grafana.
-      GF_AUTH_DISABLE_LOGIN_FORM: true # Uncomment if you want to hide the grafana login form.
-      GF_AUTH_ANONYMOUS_HIDE_VERSION: true # Uncomment this line to hide the version number from the Grafana UI.
-      GF_AUTH_ANONYMOUS_ORG_NAME: "Main Org." # Uncomment this to set anonymous login organization.
+      # GF_AUTH_ANONYMOUS_ENABLED: true # Uncomment this line to allow anonymous access to Grafana.
+      # GF_AUTH_DISABLE_LOGIN_FORM: true # Uncomment if you want to hide the grafana login form.
+      # GF_AUTH_ANONYMOUS_HIDE_VERSION: true # Uncomment this line to hide the version number from the Grafana UI.
+      # GF_AUTH_ANONYMOUS_ORG_NAME: "Main Org." # Uncomment this to set anonymous login organization.
     restart: unless-stopped
 
 volumes:
