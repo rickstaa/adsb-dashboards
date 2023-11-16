@@ -4,4 +4,4 @@ This folder contains a docker-compose file for creating a [Cloudflare tunnel](ht
 
 ## Installation
 
-First, install [Docker](https://docs.docker.com/get-docker/). Then, add the `CLOUDFLARE_TOKEN` of your Cloudflare tunnel to the `.env` file. Lastly, run the `docker compose up -d` command to start the Cloudflare container.
+First, install [Docker](https://docs.docker.com/get-docker/). Then rename the `.env.template` file to `.env` and add the `CLOUDFLARE_TOKEN` of your Cloudflare tunnel. Lastly, run the `docker compose up -d` command to start the Cloudflare container.
