@@ -515,7 +515,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "airframes"
+              "options": "airframes.io"
             },
             "properties": [
               {
@@ -652,7 +652,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "airframes"
+              "options": "airframes.io"
             },
             "properties": [
               {
