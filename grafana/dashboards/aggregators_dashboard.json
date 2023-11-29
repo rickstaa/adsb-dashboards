@@ -732,7 +732,7 @@
       "type": "timeseries"
     }
   ],
-  "refresh": "",
+  "refresh": "30s",
   "revision": 1,
   "schemaVersion": 38,
   "tags": [
@@ -750,6 +750,6 @@
   "timezone": "",
   "title": "Aggregator dashboard",
   "uid": "sXnO8RaVz",
-  "version": 3,
+  "version": 5,
   "weekStart": ""
 }
