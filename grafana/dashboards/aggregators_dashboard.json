@@ -57,7 +57,7 @@
         "content": "<div align=\"center\">\n  <a href=\"https://github.com/rickstaa/adsb-dashboards\" target=\"_blank\"><img alt=\"GitHub Repo stars\" src=\"https://img.shields.io/github/stars/rickstaa/adsb-dashboards?style=social\"></a>\n  <a href=\"https://github.com/rickstaa/adsb-dashboards/fork\" target=\"_blank\"><img alt=\"GitHub forks\" src=\"https://img.shields.io/github/forks/rickstaa/adsb-dashboards?style=social\"></a>\n</div>",
         "mode": "html"
       },
-      "pluginVersion": "10.2.0",
+      "pluginVersion": "10.2.1",
       "title": "Dashboard Info",
       "type": "text"
     },
@@ -455,67 +455,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "TAT"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "yellow",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "adsb-fi"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "blue",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "adsb-lol"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "orange",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "adsb-one"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "red",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "airframes.io"
+              "options": "airframes"
             },
             "properties": [
               {
@@ -524,6 +464,18 @@
                   "fixedColor": "purple",
                   "mode": "fixed"
                 }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "airframes"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "airframes.io"
               }
             ]
           }
@@ -652,7 +604,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "airframes.io"
+              "options": "airframes"
             },
             "properties": [
               {
@@ -750,6 +702,6 @@
   "timezone": "",
   "title": "Aggregator dashboard",
   "uid": "sXnO8RaVz",
-  "version": 5,
+  "version": 9,
   "weekStart": ""
 }
