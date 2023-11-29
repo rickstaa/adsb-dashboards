@@ -464,15 +464,7 @@
                   "fixedColor": "purple",
                   "mode": "fixed"
                 }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "airframes"
-            },
-            "properties": [
+              },
               {
                 "id": "displayName",
                 "value": "airframes.io"
@@ -613,6 +605,10 @@
                   "fixedColor": "purple",
                   "mode": "fixed"
                 }
+              },
+              {
+                "id": "displayName",
+                "value": "airframes.io"
               }
             ]
           },
@@ -702,6 +698,6 @@
   "timezone": "",
   "title": "Aggregator dashboard",
   "uid": "sXnO8RaVz",
-  "version": 9,
+  "version": 10,
   "weekStart": ""
 }
